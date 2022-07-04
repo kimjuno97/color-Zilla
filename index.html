@@ -34,6 +34,9 @@
         input{
             text-align: center;
         }
+        td:hover{
+            opacity: 0.3;
+        }
     </style>
     <title>RGB</title>
 </head>
@@ -190,12 +193,12 @@
         <div id="zero-area"></div>
     </div>
     <script>
-        let colorCode = document.querySelector("div #zero-area");
-        let colorBoxs = document.getElementsByClassName("td");
-        let sixteen = document.querySelector("input.sixteen");
-        let red = document.querySelector("input.red");
-        let green = document.querySelector("input.green");
-        let blue = document.querySelector("input.blue");
+        const colorCode = document.querySelector("div #zero-area");
+        const colorBoxs = document.getElementsByClassName("td");
+        const sixteen = document.querySelector("input.sixteen");
+        const red = document.querySelector("input.red");
+        const green = document.querySelector("input.green");
+        const blue = document.querySelector("input.blue");
 
         // 16진수 변환하는 함수
         function ColorToHex(color) {
