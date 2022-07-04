@@ -4,44 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        table {
-            width: 80%;
-            height: 50vh;
-            margin-bottom: 50px;
-        }
-        td {
-            padding: 5px;
-            border: 1px solid black;
-        }
-        div {
-            position: relative;
-        }
-        span {
-            position: absolute;
-        }
-        input {
-            margin-left: 100px;
-        }
-        #grid{
-            display: grid;
-            grid-template-columns: 240px 1fr;
-        }
-        #zero-area {
-            width: 100px;
-            border: solid black 1px;
-        }
-        input{
-            text-align: center;
-        }
-        td:hover{
-            opacity: 0.3;
-        }
-    </style>
+    <link rel="stylesheet" href="sty.css">
     <title>RGB</title>
 </head>
 <body>
-    <table>
+    <!-- color 나열 -->
+    <table> 
         <tbody>
             <tr>
                 <td class="td" style="background:#330000"></td>
@@ -179,9 +147,10 @@
             </tr>
       </tbody>
     </table>
+    <!-- color 정보 입력받는 곳 -->
     <div id="grid">
         <div>
-            <span>16진수 : #</span>
+            <span>16진수: </span>
             <input class="sixteen" type="text" style="width: 80px;"><br>
             <span>red:</span>
             <input class="red" type="text" style="width: 80px;"><br>
@@ -192,37 +161,6 @@
         </div>
         <div id="zero-area"></div>
     </div>
-    <script>
-        const colorCode = document.querySelector("div #zero-area");
-        const colorBoxs = document.getElementsByClassName("td");
-        const sixteen = document.querySelector("input.sixteen");
-        const red = document.querySelector("input.red");
-        const green = document.querySelector("input.green");
-        const blue = document.querySelector("input.blue");
-
-        // 16진수 변환하는 함수
-        function ColorToHex(color) {
-            let hexadecimal = color.toString(16);
-            return hexadecimal.length == 1 ? "0" + hexadecimal : hexadecimal;
-        }
-
-        function ConvertRGBtoHex(red, green, blue) {
-            return "#" + ColorToHex(red) + ColorToHex(green) + ColorToHex(blue);
-        }
-
-
-        for (let i = 0; i < colorBoxs.length; i++) {
-        colorBoxs[i].addEventListener("mouseover", () => cBoxIn(colorBoxs[i]));
-        }
-        function cBoxIn(e) {
-            colorCode.style.background = e.style.background;
-            let str =colorCode.style.background
-            let hexadecimal = str.substr(3).split(/[(,)]/);
-            red.value = hexadecimal[1];
-            green.value = hexadecimal[2];
-            blue.value = hexadecimal[3]; 
-            sixteen.value = ConvertRGBtoHex(Number(red.value),Number(green.value),Number(blue.value));
-        }
-    </script>
+<script src="main.js"></script>
 </body>
 </html>

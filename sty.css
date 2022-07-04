@@ -1,0 +1,32 @@
+table {
+    width: 80%;
+    height: 50vh;
+    margin-bottom: 50px;
+}
+td {
+    padding: 5px;
+    border: 1px solid black;
+}
+/* position으로 span을 정렬하였다 */
+span {
+    position: absolute;
+}
+input {
+    margin-left: 100px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 240px 1fr;
+}
+/* 칼라 가져올 공간(div)  width값으로 크기 조정 grid-template-columns 로 열 정렬하여 높이는 따로 지정안해도 맞쳐진다.*/
+#zero-area {
+    width: 100px;
+    border: solid black 1px;
+}
+input{
+    text-align: center;
+}
+/* 투명도 */
+td:hover{
+    opacity: 0.3;
+}
