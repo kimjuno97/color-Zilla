@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 80%;
+            height: 50vh;
+            margin-bottom: 50px;
+        }
+        td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+        div {
+            position: relative;
+        }
+        span {
+            position: absolute;
+        }
+        input {
+            margin-left: 100px;
+        }
+        #grid{
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+        #zero-area {
+            width: 100px;
+            border: solid black 1px;
+        }
+        input{
+            text-align: center;
+        }
+    </style>
+    <title>RGB</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="td" style="background:#330000"></td>
+                <td class="td" style="background:#331900"></td>
+                <td class="td" style="background:#333300"></td>
+                <td class="td" style="background:#193300"></td>
+                <td class="td" style="background:#003300"></td>
+                <td class="td" style="background:#003319"></td>
+                <td class="td" style="background:#003333"></td>
+                <td class="td" style="background:#001933"></td>
+                <td class="td" style="background:#000033"></td>
+                <td class="td" style="background:#190033"></td>
+                <td class="td" style="background:#330033"></td>
+                <td class="td" style="background:#330019"></td>
+                <td class="td" style="background:#000000"></td>
+            </tr>
+            <tr>
+                <td class="td" style="background:#660000"></td>
+                <td class="td" style="background:#663300"></td>
+                <td class="td" style="background:#666600"></td>
+                <td class="td" style="background:#336600"></td>
+                <td class="td" style="background:#006600"></td>
+                <td class="td" style="background:#006633"></td>
+                <td class="td" style="background:#006666"></td>
+                <td class="td" style="background:#003366"></td>
+                <td class="td" style="background:#000066"></td>
+                <td class="td" style="background:#330066"></td>
+                <td class="td" style="background:#660066"></td>
+                <td class="td" style="background:#660033"></td>
+                <td class="td" style="background:#202020"></td>
+            </tr>
+                <td class="td" style="background:#990000"></td>
+                <td class="td" style="background:#994C00"></td>
+                <td class="td" style="background:#999900"></td>
+                <td class="td" style="background:#4C9900"></td>
+                <td class="td" style="background:#009900"></td>
+                <td class="td" style="background:#00994C"></td>
+                <td class="td" style="background:#009999"></td>
+                <td class="td" style="background:#004C99"></td>
+                <td class="td" style="background:#000099"></td>
+                <td class="td" style="background:#4C0099"></td>
+                <td class="td" style="background:#990099"></td>
+                <td class="td" style="background:#99004C"></td>
+                <td class="td" style="background:#404040"></td>
+            <tr>
+                <td class="td" style="background:#CC0000"></td>
+                <td class="td" style="background:#CC6600"></td>
+                <td class="td" style="background:#CCCC00"></td>
+                <td class="td" style="background:#66CC00"></td>
+                <td class="td" style="background:#00CC00"></td>
+                <td class="td" style="background:#00CC66"></td>
+                <td class="td" style="background:#00CCCC"></td>
+                <td class="td" style="background:#0066CC"></td>
+                <td class="td" style="background:#0000CC"></td>
+                <td class="td" style="background:#6600CC"></td>
+                <td class="td" style="background:#CC00CC"></td>
+                <td class="td" style="background:#CC0066"></td>
+                <td class="td" style="background:#606060"></td>
+            </tr>
+            <tr>
+                <td class="td" style="background:#FF0000"></td>
+                <td class="td" style="background:#FF8000"></td>
+                <td class="td" style="background:#FFFF00"></td>
+                <td class="td" style="background:#80FF00"></td>
+                <td class="td" style="background:#00FF00"></td>
+                <td class="td" style="background:#00FF80"></td>
+                <td class="td" style="background:#00FFFF"></td>
+                <td class="td" style="background:#0080FF"></td>
+                <td class="td" style="background:#0000FF"></td>
+                <td class="td" style="background:#7F00FF"></td>
+                <td class="td" style="background:#FF00FF"></td>
+                <td class="td" style="background:#FF007F"></td>
+                <td class="td" style="background:#808080"></td>
+            </tr>
+            <tr>
+                <td class="td" style="background:#FF3333"></td>
+                <td class="td" style="background:#FF9933"></td>
+                <td class="td" style="background:#FFFF33"></td>
+                <td class="td" style="background:#99FF33"></td>
+                <td class="td" style="background:#33FF33"></td>
+                <td class="td" style="background:#33FF99"></td>
+                <td class="td" style="background:#33FFFF"></td>
+                <td class="td" style="background:#3399FF"></td>
+                <td class="td" style="background:#3333FF"></td>
+                <td class="td" style="background:#9933FF"></td>
+                <td class="td" style="background:#FF33FF"></td>
+                <td class="td" style="background:#FF3399"></td>
+                <td class="td" style="background:#A0A0A0"></td>
+            </tr>
+            <tr>
+                <td class="td" style="background:#FF6666"></td>
+                <td class="td" style="background:#FFB266"></td>
+                <td class="td" style="background:#FFFF66"></td>
+                <td class="td" style="background:#B2FF66"></td>
+                <td class="td" style="background:#66FF66"></td>
+                <td class="td" style="background:#66FFB2"></td>
+                <td class="td" style="background:#66FFFF"></td>
+                <td class="td" style="background:#66B2FF"></td>
+                <td class="td" style="background:#6666FF"></td>
+                <td class="td" style="background:#B266FF"></td>
+                <td class="td" style="background:#FF66FF"></td>
+                <td class="td" style="background:#FF66B2"></td>
+                <td class="td" style="background:#C0C0C0"></td>
+            </tr>
+            <tr>
+                <td class="td" style="background:#FF9999"></td>
+                <td class="td" style="background:#FFCC99"></td>
+                <td class="td" style="background:#FFFF99"></td>
+                <td class="td" style="background:#CCFF99"></td>
+                <td class="td" style="background:#99FF99"></td>
+                <td class="td" style="background:#99FFCC"></td>
+                <td class="td" style="background:#99FFFF"></td>
+                <td class="td" style="background:#99CCFF"></td>
+                <td class="td" style="background:#9999FF"></td>
+                <td class="td" style="background:#CC99FF"></td>
+                <td class="td" style="background:#FF99FF"></td>
+                <td class="td" style="background:#FF99CC"></td>
+                <td class="td" style="background:#E0E0E0"></td>
+            </tr>
+            <tr>
+                <td class="td" style="background:#FFCCCC"></td>
+                <td class="td" style="background:#FFE5CC"></td>
+                <td class="td" style="background:#FFFFCC"></td>
+                <td class="td" style="background:#E5FFCC"></td>
+                <td class="td" style="background:#CCFFCC"></td>
+                <td class="td" style="background:#CCFFE5"></td>
+                <td class="td" style="background:#CCFFFF"></td>
+                <td class="td" style="background:#CCE5FF"></td>
+                <td class="td" style="background:#CCCCFF"></td>
+                <td class="td" style="background:#E5CCFF"></td>
+                <td class="td" style="background:#FFCCFF"></td>
+                <td class="td" style="background:#FFCCE5"></td>
+                <td class="td" style="background:#FFFFFF"></td>
+
+            </tr>
+      </tbody>
+    </table>
+    <div id="grid">
+        <div>
+            <span>16진수 : #</span>
+            <input class="sixteen" type="text" style="width: 80px;"><br>
+            <span>red:</span>
+            <input class="red" type="text" style="width: 80px;"><br>
+            <span>green:</span>
+            <input class="green" type="text" style="width: 80px;"><br>
+            <span>blue:</span>
+            <input class="blue" type="text" style="width: 80px;">
+        </div>
+        <div id="zero-area"></div>
+    </div>
+    <script>
+        let colorCode = document.querySelector("div #zero-area");
+        let colorBoxs = document.getElementsByClassName("td");
+        let sixteen = document.querySelector("input.sixteen");
+        let red = document.querySelector("input.red");
+        let green = document.querySelector("input.green");
+        let blue = document.querySelector("input.blue");
+
+        // 16진수 변환하는 함수
+        function ColorToHex(color) {
+            let hexadecimal = color.toString(16);
+            return hexadecimal.length == 1 ? "0" + hexadecimal : hexadecimal;
+        }
+
+        function ConvertRGBtoHex(red, green, blue) {
+            return "#" + ColorToHex(red) + ColorToHex(green) + ColorToHex(blue);
+        }
+
+
+        for (let i = 0; i < colorBoxs.length; i++) {
+        colorBoxs[i].addEventListener("mouseover", () => cBoxIn(colorBoxs[i]));
+        }
+        function cBoxIn(e) {
+            colorCode.style.background = e.style.background;
+            let str =colorCode.style.background
+            let hexadecimal = str.substr(3).split(/[(,)]/);
+            red.value = hexadecimal[1];
+            green.value = hexadecimal[2];
+            blue.value = hexadecimal[3]; 
+            sixteen.value = ConvertRGBtoHex(Number(red.value),Number(green.value),Number(blue.value));
+        }
+    </script>
+</body>
+</html>
